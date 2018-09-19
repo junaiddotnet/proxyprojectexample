@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "First";
+}
+<script type="text/javascript" >
+    var firstObject = {};
+    var secondObject = Object.create(null);
+    var thirdObject = new Object();
+
+    // Assign Properties to object 
+    firstObject.firstProperty = "junaid mahmood";
+    document.write(firstObject.firstProperty);
+    // second way to assign property 
+
+    secondObject['key1'] = "ammar mahmood";
+    document.write(secondObject['Key1']);
+    document.write('<br> <h2> New Line </h2>');
+    // third method to assign proerry
+    // define a class
+    function Car (model , name , year)
+    {
+        this.model = model;
+        this.name = name;
+        this.year = year;
+       
+    }
+    Car.prototype.showCar = function () {
+        return this.model + ' ' + this.name + ' ' +this.year
+
+    };
+    Car.prototype.getModel = function () {
+        return 'Mode --' + this.model;
+
+    };
+    // Singlton Pattern
+    var singleTon = function () {
+        var privateVarible = 'Junaid Malik';
+        function showPrivate() {
+            return privateVarible;
+        };
+        return {
+            publicMethod:function()
+            {
+               return showPrivate();
+            },
+            publicVarible:'HEllo junaid mahmood'
+        };
+    };
+    var car1 = new Car('Honda', 'Civic', 2009);
+    var car2 = new Car('Mercedes', 'New Model', 2019);
+    var single = singleTon();
+    document.write(single.publicMethod());
+
+    document.write(car1.showCar());
+    document.write(car2.showCar());
+    document.write(car1.getModel());
+
+</script>
+<div>
+    <ul>
+        <li>
+            First Link
+        </li>
+        <li>
+            <a href="https://bbc.co.uk">Second</a>
+        </li>
+        <li>
+            <img src="~/IMG/glaxy.jpg" alt="Alternate Text" />
+        </li>
+        <li>
+            <a href="#">Third</a>
+        </li>
+        <li>
+            <img src="~/IMG/moon.jpg" alt="Alternate Text" />
+        </li>
+    </ul>
+</div>
+<h2>First</h2>
+

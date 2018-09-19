@@ -1,0 +1,34 @@
+﻿@model IList<proxyproject.Controllers.jsonFinal>
+@{
+    ViewBag.Title = "JsonPattern";
+}
+
+@{ 
+    foreach (var v in Model)
+    {
+        <div class="panel panel-primary">
+           <div class="panel-heading">
+               Selector 
+           </div>
+            <form class="form-group" method="post" action="">
+
+                <div class="panel-body">
+                    <label>Level:</label>
+                    <input class="form-control"  type="text" name="name" value="@v.level" />
+                    <label>Selector:</label>
+                    <input class="form-control" type="text" name="name" value="@v.selector" />
+                    <label>fn:</label>
+                    <input class="form-control" type="text" name="name" value="@v.fn" />
+                    <label>Value:</label>
+                    <input class="form-control" type="text" name="name" value="@v.value" />
+                    
+                </div>
+                <div class="panel-footer">
+                    <input type="submit" class="btn btn-success" value="Save ..." />
+                </div>
+            </form>
+        </div>
+    }
+}
+<h2>JsonPattern</h2>
+
