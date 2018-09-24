@@ -87,5 +87,9 @@ namespace proxyproject.Controllers
             sproc1("ammar mahmood");
 
         }
+        public ActionResult chart()
+        {
+            return View();
+        }
     }
 }
